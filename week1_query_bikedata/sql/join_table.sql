@@ -34,4 +34,4 @@ LEFT JOIN staging.orders_items oi ON o.order_id = oi.order_id
 LEFT JOIN staging.products p ON oi.product_id = p.product_id
 LEFT JOIN staging.categories ca ON p.category_id = ca.category_id
 LEFT JOIN staging.brands b ON p.brand_id = b.brand_id
-LEFT JOIN staging.staffs s ON o.staff_id = s.staff_id
+LEFT JOIN staging.staffs s ON o.staff_id = s.staff_id 
