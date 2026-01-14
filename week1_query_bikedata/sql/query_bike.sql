@@ -90,3 +90,37 @@ Intruduce
 aggregation
 ==========0*/ 
 
+--- aggregate over rows 
+--- there are other ways to aggregation(max,min ...)
+select
+  order_id,
+  product_name,
+  quantity,
+  list_price 
+from staging.joined_table;
+
+
+-- what is the total revenues from all orders ?
+
+select  
+  round(sum (quantity*list_price)) AS totale_revenue 
+from staging.joined_table;
+
+
+-- try other aggegation functions
+
+select  
+  round(min (quantity*list_price)) AS min_revenue,
+  round(max(quantity*list_price))as max_revenue 
+from staging.joined_table;
+
+
+/*==========
+case ... when 
+ ==========*/
+
+--similar if else in other lenguages 
+
+--we can replace the order_status column to some discriptions 
+
+
